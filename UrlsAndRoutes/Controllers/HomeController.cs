@@ -27,6 +27,7 @@ namespace UrlsAndRoutes.Controllers
             };
 
             r.Data["Id"] = id ?? "<no value>";
+            r.Data["Url"] = Url.Action("CustomVariable", "Home", new { id = 100 });
             return View("Result", r);
         }
     }
